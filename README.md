@@ -6,6 +6,8 @@ y vencer a los demonios jefes más fuertes para conseguir el premio final, el pr
 La historia sigue el recorrido de un fantasma del lugar, que hará todo en su poder para superar los 
 obstáculos para lograr regresar al mundo de los vivos.
 
+¿Podrá el fantasma ganar el torneo y volver a la vida?
+
 # Créditos
 
 - Samuel Kerguelen Garcia
