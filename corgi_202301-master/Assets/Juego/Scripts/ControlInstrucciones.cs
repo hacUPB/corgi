@@ -8,4 +8,12 @@ public class ControlInstrucciones : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
+    public void OnPressAnterior()
+    {
+        SceneManager.LoadScene("Instrucciones", LoadSceneMode.Single);
+    }
+    public void OnPressSiguiente()
+    {
+        SceneManager.LoadScene("Instrucciones2", LoadSceneMode.Single);
+    }
 }
