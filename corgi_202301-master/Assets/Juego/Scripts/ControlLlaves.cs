@@ -9,6 +9,15 @@ public class ControlLlaves : MonoBehaviour
     private TMP_Text txt_contador_llaves;
     private int contador_llaves;
 
+    public void Start()
+    {
+    }
+
+    public int CantidadLlavesRecolectadas()
+    {
+        return contador_llaves;
+    }
+
     public void ActualizarPuntaje(int valor)
     {
         contador_llaves += valor;
