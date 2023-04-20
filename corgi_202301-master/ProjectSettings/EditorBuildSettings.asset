@@ -53,9 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CorgiEngine/Demos/Corgi3D/Corgi3D.unity
     guid: 21235c11eb96a4cce9524e313642ab64
-  - enabled: 1
-    path: Assets/Juego/MinimalLevel.unity
-    guid: b5dafbb7f5956d94ba41cd169cc39435
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/CorgiEngine/Demos/Minimal/MinimalFlight.unity
     guid: 5714929c69111d6479988071c2f49c7c
@@ -242,4 +242,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Juego/LoadingScreen.unity
     guid: 1935a0cc7ef161249b1968ef8943745e
+  - enabled: 1
+    path: Assets/Juego/Nivel3.unity
+    guid: 81f15ac731e403043a09af039fdf465c
+  - enabled: 1
+    path: Assets/Juego/Ganaste.unity
+    guid: 372a8300f5d882c45bebfe7d45c83b87
   m_configObjects: {}
