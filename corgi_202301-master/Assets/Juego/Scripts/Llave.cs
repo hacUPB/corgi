@@ -7,20 +7,18 @@ using MoreMountains.CorgiEngine;
 public class Llave : PickableItem
 {
     [SerializeField]
-    private GameObject ui_puntaje;
-    [SerializeField]
-    private int valor_llave;
-    private ControlLlaves control_llaves;
+    private GameObject game_object;
 
-    public void Start()
+    public void Ocultar()
     {
-        //PickableItem.Start();
-        control_llaves = ui_puntaje.GetComponent<ControlLlaves>();
+        game_object.SetActive(false);
+    }
+    public void Mostrar()
+    {
+        game_object.SetActive(true);
     }
     protected override void Pick(GameObject picker)
     {
 
-        //Debug.Log("Recolección");
-        control_llaves.ActualizarPuntaje(valor_llave);
     }
 }
