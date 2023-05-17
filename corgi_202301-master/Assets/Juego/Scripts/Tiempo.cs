@@ -2,24 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using MoreMountains.CorgiEngine;
+using MoreMountains.Tools;
 
-public class Tiempo : MonoBehaviour
+public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
 {
     [SerializeField]
     private TMP_Text txt_tiempo;
     private int tiempo;
     private int limitetiempo;
     private int minutos, segundos;
-    
 
-    void Start()
+
+
+    public virtual void OnMMEvent(MMGameEvent easyevent)
     {
-        limitetiempo = 65;
-        StartCoroutine(Incrementartiempo());
-
+        // here we start a coroutine that will display our achievement
+        if (easyevent.EventName == "facil")
+        {
+            limitetiempo = 65;
+            Debug.Log(limitetiempo);
+            StartCoroutine(Incrementartiempo());
+        }
     }
 
-    
     IEnumerator Incrementartiempo()
     {        
         yield return new WaitForSecondsRealtime(1);
@@ -42,5 +48,13 @@ public class Tiempo : MonoBehaviour
     public void ActualizarValorUI()
     {
         txt_tiempo.text = string.Format("{0:00}:{1:00}",minutos,segundos);
+    }
+    void OnEnable()
+    {
+        this.MMEventStartListening<MMGameEvent>();
+    }
+    void OnDisable()
+    {
+        this.MMEventStopListening<MMGameEvent>();
     }
 }

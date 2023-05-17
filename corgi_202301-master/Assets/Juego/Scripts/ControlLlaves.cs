@@ -20,6 +20,7 @@ public class ControlLlaves : MonoBehaviour
 
     public void ActualizarPuntaje(int valor)
     {
+        ControlPuntaje.Instance.SumarPuntos(valor);
         contador_llaves += valor;
         ActualizarValorUI();
     }

@@ -22,5 +22,6 @@ public class Llave1 : PickableItem
 
         //Debug.Log("Recolección");
         control_llaves.ActualizarPuntaje(valor_llave);
+
     }
 }
