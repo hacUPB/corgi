@@ -7,6 +7,7 @@ public class BotonCerrarVentana : MonoBehaviour
 {
     [SerializeField]
     private GameObject ventana;
+    private Tiempo tiempo;
 
     public void OnCerrarVentana()
     {
