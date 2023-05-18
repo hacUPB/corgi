@@ -248,4 +248,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Juego/Ganaste.unity
     guid: 372a8300f5d882c45bebfe7d45c83b87
+  - enabled: 1
+    path: Assets/Juego/Creditos.unity
+    guid: 6f98a274e41920847bff05a7782a187a
   m_configObjects: {}

@@ -15,18 +15,9 @@ public class ControlVentana : MonoBehaviour, MMEventListener<MMGameEvent>
         {
             ventana.SetActive(true);
             GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
-            StartCoroutine(CerrarVentana());
         }
     }
 
-    IEnumerator CerrarVentana()
-    {
-        Debug.Log("Cerrar Ventana");
-        yield return new WaitForSecondsRealtime(5);
-        Debug.Log("la Ventana se cerro");
-        GameManager.Instance.UnPause();
-        ventana.SetActive(false);
-    }
     void OnEnable()
     {
         this.MMEventStartListening<MMGameEvent>();
