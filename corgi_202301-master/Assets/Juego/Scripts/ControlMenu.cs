@@ -13,4 +13,10 @@ public class ControlMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Instrucciones", LoadSceneMode.Single);
     }
+
+    public void OnPressCreditos()
+    {
+        SceneManager.LoadScene("Creditos", LoadSceneMode.Single);
+    }
+
 }
