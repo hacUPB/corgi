@@ -10,13 +10,26 @@ public class BotonCerrarVentana : MonoBehaviour
     private GameObject ventana;
     
 
-    public void OnCerrarVentana()
+    public void OnFacil()
     {
         ventana.SetActive(false);
         GameManager.Instance.UnPause();
         MMEventManager.TriggerEvent(new MMGameEvent("facil"));
       
 
+    }
+
+    public void OnMedio()
+    {
+        ventana.SetActive(false);
+        GameManager.Instance.UnPause();
+        MMEventManager.TriggerEvent(new MMGameEvent("medio"));
+    }
+    public void OnDificil()
+    {
+        ventana.SetActive(false);
+        GameManager.Instance.UnPause();
+        MMEventManager.TriggerEvent(new MMGameEvent("dificil"));
     }
 
 }

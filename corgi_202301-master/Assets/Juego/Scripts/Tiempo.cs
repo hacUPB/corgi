@@ -20,7 +20,19 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
         // here we start a coroutine that will display our achievement
         if (easyevent.EventName == "facil")
         {
-            limitetiempo = 65;
+            limitetiempo = 180;
+            Debug.Log(limitetiempo);
+            StartCoroutine(Incrementartiempo());
+        }
+        if (easyevent.EventName == "medio")
+        {
+            limitetiempo = 120;
+            Debug.Log(limitetiempo);
+            StartCoroutine(Incrementartiempo());
+        }
+        if (easyevent.EventName == "dificil")
+        {
+            limitetiempo = 60;
             Debug.Log(limitetiempo);
             StartCoroutine(Incrementartiempo());
         }
@@ -42,6 +54,7 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
         }
         else
         {
+            MMSceneLoadingManager.LoadScene("jugar");
             Debug.Log("Se terminó el tiempo");
         }
     }
