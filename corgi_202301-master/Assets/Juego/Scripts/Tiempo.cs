@@ -67,7 +67,7 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
         }
         else
         {
-            MMSceneLoadingManager.LoadScene("jugar");
+            MMSceneLoadingManager.LoadScene("menu");
             Debug.Log("Se terminó el tiempo");
         }
     }
