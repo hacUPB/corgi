@@ -12,7 +12,7 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
     public int tiempo;
     public int limitetiempo;
     private int minutos, segundos;
-    public static Tiempo Instancia;
+    public static Tiempo Instancia;cd dow   
     void Awake()
     {
         if (Tiempo.Instancia== null)
