@@ -9,6 +9,7 @@ public class ControlPuntaje : MonoBehaviour
 
     public static ControlPuntaje Instance { get; private set; }
     [SerializeField]
+    
     private int cantidad;
 
     private void Awake()
@@ -23,10 +24,13 @@ public class ControlPuntaje : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void SumarPuntos(int valorllave)
+    public int SumarPuntos(int valorllave)
     {
         cantidad += valorllave;
+        return cantidad;
+        
     }
+    
        
 
 }

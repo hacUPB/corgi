@@ -9,11 +9,24 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
 {
     [SerializeField]
     private TMP_Text txt_tiempo;
-    private int tiempo;
-    private int limitetiempo;
+    public int tiempo;
+    public int limitetiempo;
     private int minutos, segundos;
-
-
+    public static Tiempo Instancia;
+    void Awake()
+    {
+        if (Tiempo.Instancia== null)
+        {
+            Tiempo.Instancia = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+   
+    
 
     public virtual void OnMMEvent(MMGameEvent easyevent)
     {
@@ -70,4 +83,5 @@ public class Tiempo : MonoBehaviour, MMEventListener<MMGameEvent>
     {
         this.MMEventStopListening<MMGameEvent>();
     }
+    
 }

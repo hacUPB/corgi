@@ -7,6 +7,7 @@ public class ControlLlaves : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text txt_contador_llaves;
+    private int cantidad;
     private int contador_llaves;
 
     public void Start()
@@ -20,12 +21,12 @@ public class ControlLlaves : MonoBehaviour
 
     public void ActualizarPuntaje(int valor)
     {
-        ControlPuntaje.Instance.SumarPuntos(valor);
+        cantidad = ControlPuntaje.Instance.SumarPuntos(valor);
         contador_llaves += valor;
         ActualizarValorUI();
     }
     public void ActualizarValorUI()
     {
-        txt_contador_llaves.text ="" + contador_llaves;
+        txt_contador_llaves.text ="" + cantidad;
     }
 }
